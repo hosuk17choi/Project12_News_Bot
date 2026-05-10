@@ -40,7 +40,7 @@ def generate_report(news_data):
     
     # 2026년 기준 가장 안정적인 호출 방식
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3-flash",
         contents=prompt
     )
     return response.text
