@@ -61,7 +61,7 @@ def generate_report(news_data):
     """
     
     response = client.models.generate_content(
-        model="gemini-2.5-pro", # 분량과 논리력을 위해 Pro 모델 사용 권장 (Flash도 가능)
+        model="gemini-2.5-flash", # 분량과 논리력을 위해 Pro 모델 사용 권장 (Flash도 가능)
         contents=prompt
     )
     return response.text
