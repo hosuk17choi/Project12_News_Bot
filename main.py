@@ -50,11 +50,35 @@ def generate_report(news_data):
        - 학생 Q&A: 아주 구체적인 고민(예: 6월 모평 대비, 수면 관리 등)에 대한 해결책 5가지 이상
     5. 시그니처: "PROJECT 12 : 나만의 성공 프로젝트를 완성하다."
 
-    [출력 및 디자인 규격]
-    - 반드시 <html>, <body> 태그를 포함한 완전한 HTML로 작성할 것.
-    - CSS: @media print {{ .page-break {{ page-break-after: always; }} }} 를 사용하여 페이지 구분.
-    - 폰트 크기 11pt, 줄간격 1.8로 설정하여 가독성 확보.
-    - 긴 설명과 구체적인 사례를 나열하여 분량을 충분히 확보할 것.
+  [중요: HTML 이메일 디자인 규칙]
+- 반드시 Gmail 이메일에서 깨지지 않는 HTML로 작성
+- div보다 table 기반 레이아웃 사용
+- CSS는 반드시 inline style만 사용
+- <style> 태그 최소화
+- flex, grid 사용 금지
+- width:100%, max-width:900px 적용
+- 전체 문서는 흰 배경 카드형 디자인
+- section마다 박스 스타일 적용:
+  background:#ffffff;
+  border-radius:14px;
+  padding:28px;
+  margin-bottom:20px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+
+- 타이틀은 세련된 뉴스레터 스타일
+- PROJECT12 브랜드 느낌:
+  신뢰감 + 프리미엄 교육 컨설팅 분위기
+- 색상:
+  메인 #1E3A8A
+  포인트 #3B82F6
+  배경 #F8FAFC
+
+- 폰트:
+  Apple SD Gothic Neo, Pretendard, Arial, sans-serif
+
+- HTML 결과만 출력
+- ```html 같은 코드블럭 절대 금지
 
     [데이터 정보]
     {news_data}
